@@ -29,5 +29,5 @@ _Config.SKIP_EXISTING_FILES = False # set true if you need skip already existsin
 | librespot | 0.0.6  | `pip install -U ﻿librespot==0.0.6` | `pip3 install -U ﻿librespot==0.0.6` |
 | pydub     | 0.25.1 | `pip install -U ﻿pydub==0.25.1`    | `pip3 install -U ﻿pydub==0.25.1`    |
 | requests  | 2.28.1 | `pip install -U ﻿requests==2.28.1` | `pip3 install -U ﻿requests==2.28.1` |
-| music-tag | 0.4.3  | pip install -U ﻿music-tag==0.4.3   | pip3 install -U ﻿music-tag==0.4.3   |
+| music-tag | 0.4.3  | `pip install -U ﻿music-tag==0.4.3` | `pip3 install -U ﻿music-tag==0.4.3` |
 
