@@ -21,22 +21,29 @@ from pydub import AudioSegment
 
 
 class _Config:
-    _SESSION_PATH = './client/'
+    
+    """
+    SKIP_EXISTING_FILES: bool - Skip already downloaded files
+    MUSIC_FORMAT: str - Format of result (ogg or mp3)
+    FORCE_PREMIUM: bool - set to True if not detecting your premium account automatically
+    RAW_AUDIO_AS_IS: bool -  set to True if you wish you save the raw audio without re-encoding it.
+    ANTI_BAN_WAIT_TIME: int - This is how many seconds program waits between downloading tracks so spotify doesn't get
+    out the ban hammer
 
+    OVERRIDE_AUTO_WAIT: bool - Set this to True to not wait at all between tracks and just go balls to the wall
+
+    """
+    
     SKIP_EXISTING_FILES = True
-    MUSIC_FORMAT = os.getenv('MUSIC_FORMAT') or "mp3"  # "mp3" | "ogg"
-    FORCE_PREMIUM = False  # set to True if not detecting your premium account automatically
+    MUSIC_FORMAT = os.getenv('MUSIC_FORMAT') or "mp3" 
+    FORCE_PREMIUM = False 
     RAW_AUDIO_AS_IS = False or os.getenv(
-        'RAW_AUDIO_AS_IS') == "y"  # set to True if you wish you save the raw audio without re-encoding it.
-    # This is how many seconds ZSpotify waits between downloading tracks so spotify doesn't get out the ban hammer
+        'RAW_AUDIO_AS_IS') == "y" 
     ANTI_BAN_WAIT_TIME = 5
     ANTI_BAN_WAIT_TIME_ALBUMS = 30
-    # Set this to True to not wait at all between tracks and just go balls to the wall
     OVERRIDE_AUTO_WAIT = False
     CHUNK_SIZE = 50000
-
     LIMIT = 50
-
     requests.adapters.DEFAULT_RETRIES = 10
     REINTENT_DOWNLOAD = 30
 
